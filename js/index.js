@@ -21,4 +21,3 @@ document.getElementById("btn").addEventListener
    function onFail(message) {
       alert('Failed because: ' + message);
    }
-}
