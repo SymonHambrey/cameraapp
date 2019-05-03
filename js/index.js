@@ -2,7 +2,7 @@ document.getElementById("btn").addEventListener
    ("click", cameraTakePicture);
 
    function cameraTakePicture() {
-   Camera.getPicture(onSuccess, onFail, {
+   navigator.camera.getPicture(onSuccess, onFail, {
       quality: 50,
       destinationType: Camera.DestinationType.DATA_URL
    });
