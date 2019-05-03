@@ -1,17 +1,11 @@
 document.getElementById("btn").addEventListener
-   ("click", capturePhoto);
+   ("click", cameraTakePicture);
 
-   function capturePhoto() {
-    var options = {
-        quality: 100,
-        destinationType: navigator.camera.DestinationType.DATA_URL,
-        sourceType: navigator.camera.PictureSourceType.CAMERA,
-        mediaType: navigator.camera.MediaType.CAMERA,
-        encodingType: navigator.camera.EncodingType.JPEG,
-        saveToPhotoAlbum: true
-    };
-    navigator.camera.getPicture(onPhotoDataSuccess, onFail, options);
-}
+   function cameraTakePicture() {
+   Camera.getPicture(onSuccess, onFail, {
+      quality: 50,
+      destinationType: Camera.DestinationType.DATA_URL
+   });
 
    function onSuccess(imageData) {
       var image = document.getElementById('image');
@@ -21,3 +15,4 @@ document.getElementById("btn").addEventListener
    function onFail(message) {
       alert('Failed because: ' + message);
    }
+}
