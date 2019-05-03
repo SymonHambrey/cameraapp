@@ -4,10 +4,10 @@ document.getElementById("btn").addEventListener
    function capturePhoto() {
     var options = {
         quality: 100,
-        destinationType: Camera.DestinationType.DATA_URL,
-        sourceType: Camera.PictureSourceType.CAMERA,
-        mediaType: Camera.MediaType.CAMERA,
-        encodingType: Camera.EncodingType.JPEG,
+        destinationType: navigator.camera.DestinationType.DATA_URL,
+        sourceType: navigator.camera.PictureSourceType.CAMERA,
+        mediaType: navigator.camera.MediaType.CAMERA,
+        encodingType: navigator.camera.EncodingType.JPEG,
         saveToPhotoAlbum: true
     };
     navigator.camera.getPicture(onPhotoDataSuccess, onFail, options);
