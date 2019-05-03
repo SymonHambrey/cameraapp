@@ -19,7 +19,7 @@
     <plugin name="cordova-plugin-geolocation"/>
 
     <!--Plugin to get camera data-->
-  <!--  <plugin name="cordova-plugin-camera"/> -->
+    <plugin name="cordova-plugin-camera"/>
 
     <author href="frih1_16.worcestercomputing.com" email="frih1_16@uni.worc.ac.uk">Mobile Apps</author>
 
