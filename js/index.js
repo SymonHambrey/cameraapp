@@ -1,11 +1,17 @@
 document.getElementById("btn").addEventListener
-   ("click", cameraTakePicture);
+   ("click", capturePhoto);
 
-   function cameraTakePicture() {
-   navigator.camera.getPicture(onSuccess, onFail, {
-      quality: 50,
-      destinationType: Camera.DestinationType.DATA_URL
-   });
+   function capturePhoto() {
+    var options = {
+        quality: 100,
+        destinationType: Camera.DestinationType.DATA_URL,
+        sourceType: Camera.PictureSourceType.CAMERA,
+        mediaType: Camera.MediaType.CAMERA,
+        encodingType: Camera.EncodingType.JPEG,
+        saveToPhotoAlbum: true
+    };
+    navigator.camera.getPicture(onPhotoDataSuccess, onFail, options);
+}
 
    function onSuccess(imageData) {
       var image = document.getElementById('image');
